@@ -14,6 +14,11 @@ public class Product {
 	private String productName;
 	private String productCategory;
 	private Long productRate;
+	private String description ;
+	private String rating;
+	private String imageurl;
+
+	
 	
 	public Long getProductId() {
 		return productId;
@@ -39,20 +44,43 @@ public class Product {
 	public void setProductRate(Long productRate) {
 		this.productRate = productRate;
 	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description ) {
+		this.description = description;
+	}
+	public String getRating() {
+		return rating;
+	}
+	public void setRating(String rating) {
+		this.rating = rating;
+	}
+	public String getImageurl() {
+		return imageurl;
+	}
+	public void setImageurl(String imageurl) {
+		this.imageurl = imageurl;
+	}
 	
-	public Product(Long productId, String productName, String productCategory, Long productRate) {
+	public Product(Long productId, String productName, String productCategory, Long productRate, String description, String rating, String imageurl) {
 		super();
 		this.productId = productId;
 		this.productName = productName;
 		this.productCategory = productCategory;
 		this.productRate = productRate;
+		this.description = description;
+		this.rating = rating;
+		this.imageurl = imageurl;
+		
 	}
 	public Product() {}
 	
 	@Override
 	public String toString() {
 		return "Product [productId=" + productId + ", productName=" + productName + ", productCategory="
-				+ productCategory + ", productRate=" + productRate + "]";
+				+ productCategory + ", productRate=" + productRate + ", description=" + description + ", rating="
+				+ rating + ", imageurl=" + imageurl + "]";
 	}
 	
 	

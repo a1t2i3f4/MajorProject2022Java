@@ -26,6 +26,8 @@ public class ProductService {
 	}
 
 	public List<Product> getProducts() {return (List<Product>) this.repo.findAll();}
+	
+	public List<Product> getProductCategory(String ProductCategory) {return (List<Product>) this.repo.findByProductCategory(ProductCategory);}
 
 	public Product createProduct(Product product) {
 		this.repo.save(product);
@@ -38,6 +40,11 @@ public class ProductService {
 			product.setProductName(emp.getProductName());
 			product.setProductCategory(emp.getProductCategory());
 			product.setProductRate(emp.getProductRate());
+			product.setDescription(emp.getDescription());
+			product.setRating(emp.getRating());
+			product.setImageurl(emp.getImageurl());
+			
+
 			
 			repo.save(product);
 			
